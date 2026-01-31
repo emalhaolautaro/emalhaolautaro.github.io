@@ -1,0 +1,53 @@
+/* Grimdark Design System */
+:root {
+  /* Colors */
+  --void: #0a0a0a;
+  --grim: #1a1a1a;
+  --terminal-green: #00ff41;
+  --text-primary: rgba(255, 255, 255, 0.87);
+  --text-secondary: #888888;
+
+  /* Typography */
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+
+  /* Rendering */
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  color-scheme: dark;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--void);
+  color: var(--text-primary);
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+a {
+  color: var(--terminal-green);
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+::selection {
+  background: var(--terminal-green);
+  color: var(--void);
+}

@@ -1,0 +1,53 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.title {
+  font-size: clamp(2rem, 8vw, 4rem);
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.accent {
+  color: #00ff41;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  color: #666;
+  margin: 0.5rem 0 2rem;
+  font-weight: 300;
+}
+
+.terminal-line {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'Courier New', monospace;
+  font-size: 1rem;
+  color: #444;
+}
+
+.prompt {
+  color: #00ff41;
+}
+
+.command {
+  color: #888;
+}
+
+.cursor {
+  animation: blink 1s step-end infinite;
+  color: #00ff41;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
