@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { AnimatePresence } from 'framer-motion'
-import BootIntro from './components/BootIntro'
+import BootIntro from './components/boot/BootIntro'
 import Home from './pages/Home'
 
 /**
