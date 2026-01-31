@@ -1,9 +1,34 @@
-/* Grimdark Design System */
+/* ═══════════════════════════════════════════════════════════════
+   GRIMDARK DESIGN SYSTEM
+   Portfolio: Lautaro Emalhao
+   Aesthetic: Industrial / Dark Fantasy / Biomechanical
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ─────────── Google Fonts ─────────── */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+/* ─────────── Tailwind v4 ─────────── */
+@import "tailwindcss";
+
+/* ─────────── Theme Configuration ─────────── */
+@theme {
+  --color-deep-void: #050505;
+  --color-void: #0a0a0a;
+  --color-grim: #1a1a1a;
+  --color-accent: #00ff41;
+
+  --font-family-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-family-mono: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+/* ─────────── Base Styles ─────────── */
 :root {
-  /* Colors */
+  /* Colors - CSS variables for JS access */
+  --deep-void: #050505;
   --void: #0a0a0a;
   --grim: #1a1a1a;
-  --terminal-green: #00ff41;
+  --accent: #00ff41;
   --text-primary: rgba(255, 255, 255, 0.87);
   --text-secondary: #888888;
 
@@ -28,9 +53,10 @@
 }
 
 body {
-  background-color: var(--void);
+  background-color: var(--deep-void);
   color: var(--text-primary);
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 #root {
@@ -38,7 +64,7 @@ body {
 }
 
 a {
-  color: var(--terminal-green);
+  color: var(--accent);
   text-decoration: none;
   transition: opacity 0.2s ease;
 }
@@ -48,6 +74,119 @@ a:hover {
 }
 
 ::selection {
-  background: var(--terminal-green);
+  background: var(--accent);
   color: var(--void);
+}
+
+/* ─────────── Utility Classes ─────────── */
+
+/* Deep void background */
+.bg-deep-void {
+  background-color: var(--deep-void);
+}
+
+/* Grain/Noise texture */
+.grain-bg {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+}
+
+/* ─────────── Glitch Animation ─────────── */
+.glitch-active {
+  animation: glitch-skew 0.5s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-skew {
+  0% {
+    transform: skew(0deg);
+  }
+
+  20% {
+    transform: skew(-2deg);
+  }
+
+  40% {
+    transform: skew(1deg);
+  }
+
+  60% {
+    transform: skew(-1deg);
+  }
+
+  80% {
+    transform: skew(2deg);
+  }
+
+  100% {
+    transform: skew(0deg);
+  }
+}
+
+.animate-glitch-1 {
+  animation: glitch-1 0.3s infinite linear alternate-reverse;
+}
+
+.animate-glitch-2 {
+  animation: glitch-2 0.3s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-1 {
+  0% {
+    transform: translateX(-2px);
+  }
+
+  100% {
+    transform: translateX(2px);
+  }
+}
+
+@keyframes glitch-2 {
+  0% {
+    transform: translateX(2px);
+  }
+
+  100% {
+    transform: translateX(-2px);
+  }
+}
+
+/* ─────────── Blink Animation ─────────── */
+.animate-blink {
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+/* ─────────── Accent Text Color ─────────── */
+.text-accent {
+  color: var(--accent);
+}
+
+/* ─────────── Scrollbar Styling ─────────── */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--void);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--grim);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2a2a2a;
 }

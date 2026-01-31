@@ -1,17 +1,27 @@
-import './App.css'
+import { useState } from 'react'
+import { AnimatePresence } from 'framer-motion'
+import BootIntro from './components/BootIntro'
+import Home from './pages/Home'
 
+/**
+ * App - Orchestrates boot intro → home transition
+ */
 function App() {
+  const [showBoot, setShowBoot] = useState(true)
+
   return (
-    <main className="container">
-      <h1 className="title">
-        <span className="accent">&gt;</span> Lautaro Emalhao
-      </h1>
-      <p className="subtitle">Software Engineer · Systems Architect</p>
-      <div className="terminal-line">
-        <span className="prompt">$</span>
-        <span className="command"> loading portfolio<span className="cursor">_</span></span>
-      </div>
-    </main>
+    <>
+      <AnimatePresence mode="wait">
+        {showBoot && (
+          <BootIntro
+            key="boot"
+            onComplete={() => setShowBoot(false)}
+          />
+        )}
+      </AnimatePresence>
+
+      {!showBoot && <Home />}
+    </>
   )
 }
 
