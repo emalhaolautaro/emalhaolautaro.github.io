@@ -12,7 +12,7 @@ const HeroTitle: React.FC<HeroTitleProps> = ({ name, role }) => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2, duration: 0.6 }}
-                className="text-4xl md:text-5xl font-bold tracking-tight text-white leading-tight"
+                className="text-4xl md:text-5xl font-bold tracking-tight text-eggshell leading-tight"
             >
                 {name}
             </motion.h1>
@@ -21,7 +21,7 @@ const HeroTitle: React.FC<HeroTitleProps> = ({ name, role }) => {
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.35, duration: 0.5 }}
-                className="text-lg md:text-xl text-white/60 mt-1"
+                className="text-lg md:text-xl text-eggshell/70 mt-1"
             >
                 {role}
             </motion.p>

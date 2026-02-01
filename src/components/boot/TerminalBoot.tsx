@@ -90,9 +90,9 @@ const TerminalBoot: React.FC<TerminalBootProps> = ({
                         key={index}
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
-                        className="text-accent/80"
+                        className="text-[#00ff41]/90"
                     >
-                        <span className="text-accent/50">[{line.timestamp}]</span>{' '}
+                        <span className="text-[#00ff41]/60">[{line.timestamp}]</span>{' '}
                         {line.message}
                     </motion.div>
                 ))}
@@ -100,7 +100,7 @@ const TerminalBoot: React.FC<TerminalBootProps> = ({
 
             {/* Currently typing line */}
             {isTyping && currentLineText && (
-                <div className="text-accent/80">
+                <div className="text-[#00ff41]/90">
                     {currentLineText}
                     <span className="animate-pulse">▌</span>
                 </div>

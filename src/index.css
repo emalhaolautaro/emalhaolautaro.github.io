@@ -13,10 +13,11 @@
 
 /* ─────────── Theme Configuration ─────────── */
 @theme {
-  --color-deep-void: #050505;
-  --color-void: #0a0a0a;
-  --color-grim: #1a1a1a;
-  --color-accent: #00ff41;
+  --color-onyx: hsla(270, 6%, 7%, 1);
+  --color-coffee-bean: hsla(318, 45%, 6%, 1);
+  --color-dust-grey: hsla(38, 16%, 76%, 1);
+  --color-blue-slate: hsla(233, 14%, 46%, 1);
+  --color-blood-red: hsla(3, 99%, 28%, 1);
 
   --font-family-sans: 'Inter', system-ui, -apple-system, sans-serif;
   --font-family-mono: 'JetBrains Mono', 'Fira Code', monospace;
@@ -24,17 +25,9 @@
 
 /* ─────────── Base Styles ─────────── */
 :root {
-  /* Colors - CSS variables for JS access */
-  --deep-void: #050505;
-  --void: #0a0a0a;
-  --grim: #1a1a1a;
-  --accent: #00ff41;
-  --text-primary: rgba(255, 255, 255, 0.87);
-  --text-secondary: #888888;
-
   /* Typography */
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  line-height: 1.6;
+  font-family: var(--font-family-sans);
+  line-height: 1.5;
   font-weight: 400;
 
   /* Rendering */
@@ -46,15 +39,9 @@
   color-scheme: dark;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
-  background-color: var(--deep-void);
-  color: var(--text-primary);
+  background-color: var(--color-onyx);
+  color: var(--color-dust-grey);
   min-height: 100vh;
   overflow-x: hidden;
 }
@@ -76,19 +63,6 @@ a:hover {
 ::selection {
   background: var(--accent);
   color: var(--void);
-}
-
-/* ─────────── Utility Classes ─────────── */
-
-/* Deep void background */
-.bg-deep-void {
-  background-color: var(--deep-void);
-}
-
-/* Grain/Noise texture */
-.grain-bg {
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
-  background-repeat: repeat;
 }
 
 /* ─────────── Glitch Animation ─────────── */
@@ -148,28 +122,6 @@ a:hover {
   100% {
     transform: translateX(-2px);
   }
-}
-
-/* ─────────── Blink Animation ─────────── */
-.animate-blink {
-  animation: blink 1s step-end infinite;
-}
-
-@keyframes blink {
-
-  0%,
-  100% {
-    opacity: 1;
-  }
-
-  50% {
-    opacity: 0;
-  }
-}
-
-/* ─────────── Accent Text Color ─────────── */
-.text-accent {
-  color: var(--accent);
 }
 
 /* ─────────── Scrollbar Styling ─────────── */
