@@ -13,7 +13,7 @@
 
 /* ─────────── Theme Configuration ─────────── */
 @theme {
-  --color-onyx: hsla(270, 6%, 7%, 1);
+  --color-dark-obsidian: hsla(240, 10%, 4%, 1);
   --color-coffee-bean: hsla(318, 45%, 6%, 1);
   --color-dust-grey: hsla(38, 16%, 76%, 1);
   --color-blue-slate: hsla(233, 14%, 46%, 1);

@@ -1,5 +1,6 @@
 import Hero from '../components/hero/Hero';
 import CertificationSection from '../components/certifications/CertificationSection';
+import SectionDivider from '../components/ui/SectionDivider';
 
 /**
  * Home - Portfolio homepage
@@ -8,12 +9,18 @@ import CertificationSection from '../components/certifications/CertificationSect
  */
 const Home: React.FC = () => {
     return (
-        <main className="relative min-h-screen">
+        <main className="relative min-h-screen bg-dark-obsidian">
             {/* Global background - handles its own fixed positioning */}
             {/* NetworkBackground moved to Hero */}
 
             {/* Content */}
             <Hero />
+
+            <SectionDivider
+                sectionNumber="02"
+                label="ACADEMIC_RECORDS"
+            />
+
             <CertificationSection />
         </main>
     );
