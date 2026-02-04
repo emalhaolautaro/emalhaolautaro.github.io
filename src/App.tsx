@@ -11,16 +11,20 @@ function App() {
 
   return (
     <>
-      <AnimatePresence mode="wait">
+      <AnimatePresence>
         {showBoot && (
-          <BootIntro
-            key="boot"
-            onComplete={() => setShowBoot(false)}
-          />
+          <div className="relative z-50">
+            <BootIntro
+              key="boot"
+              onComplete={() => setShowBoot(false)}
+            />
+          </div>
         )}
       </AnimatePresence>
 
-      {!showBoot && <Home />}
+      <div className="absolute inset-0 z-0">
+        <Home />
+      </div>
     </>
   )
 }

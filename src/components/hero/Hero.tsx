@@ -18,6 +18,8 @@ const Hero: React.FC = () => {
                 style={{
                     background: 'radial-gradient(circle, hsla(3, 99%, 28%, 0.15) 0%, transparent 60%)',
                     filter: 'blur(80px)',
+                    transform: 'translateZ(0)',
+                    willChange: 'transform',
                 }}
             />
 
@@ -27,6 +29,8 @@ const Hero: React.FC = () => {
                 style={{
                     background: 'radial-gradient(circle, hsla(233, 14%, 46%, 0.12) 0%, transparent 60%)',
                     filter: 'blur(100px)',
+                    transform: 'translateZ(0)',
+                    willChange: 'transform',
                 }}
             />
 
@@ -36,6 +40,8 @@ const Hero: React.FC = () => {
                 style={{
                     background: 'radial-gradient(circle, hsla(38, 16%, 76%, 0.05) 0%, transparent 50%)',
                     filter: 'blur(60px)',
+                    transform: 'translateZ(0)',
+                    willChange: 'transform',
                 }}
             />
 

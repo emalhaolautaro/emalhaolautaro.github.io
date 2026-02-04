@@ -44,7 +44,6 @@ const TerminalBoot: React.FC<TerminalBootProps> = ({
     useEffect(() => {
         if (visibleLines >= BOOT_SEQUENCE.length) {
             setIsTyping(false);
-            // Notify parent that boot is complete after a brief pause
             if (onBootComplete) {
                 setTimeout(() => onBootComplete(), 800);
             }
@@ -54,21 +53,31 @@ const TerminalBoot: React.FC<TerminalBootProps> = ({
         const currentLine = BOOT_SEQUENCE[visibleLines];
         const fullText = `[${currentLine.timestamp}] ${currentLine.message}`;
         let charIndex = 0;
+        let lastTime = performance.now();
+        let animationFrameId: number;
 
-        const typeInterval = setInterval(() => {
-            charIndex++;
-            setCurrentLineText(fullText.slice(0, charIndex));
+        const animate = (time: number) => {
+            const deltaTime = time - lastTime;
 
-            if (charIndex >= fullText.length) {
-                clearInterval(typeInterval);
+            if (deltaTime >= typingSpeed) {
+                charIndex++;
+                setCurrentLineText(fullText.slice(0, charIndex));
+                lastTime = time;
+            }
+
+            if (charIndex < fullText.length) {
+                animationFrameId = requestAnimationFrame(animate);
+            } else {
                 setTimeout(() => {
                     setVisibleLines(prev => prev + 1);
                     setCurrentLineText('');
                 }, lineDelay);
             }
-        }, typingSpeed);
+        };
 
-        return () => clearInterval(typeInterval);
+        animationFrameId = requestAnimationFrame(animate);
+
+        return () => cancelAnimationFrame(animationFrameId);
     }, [visibleLines, typingSpeed, lineDelay, onBootComplete]);
 
     // Auto-scroll to bottom

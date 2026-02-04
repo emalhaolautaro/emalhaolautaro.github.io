@@ -14,7 +14,7 @@ const BootIntro: React.FC<BootIntroProps> = ({ onComplete }) => {
         <motion.div
             initial={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.8, ease: 'easeInOut' }}
+            transition={{ duration: 0.5, ease: 'easeInOut' }}
             className="fixed inset-0 z-50 bg-black flex items-center justify-center p-8"
         >
             <div className="max-w-2xl w-full">
