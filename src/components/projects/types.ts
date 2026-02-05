@@ -12,6 +12,7 @@ export interface Project {
     status: 'ACTIVE' | 'ARCHIVED' | 'WIP';
     repoUrl?: string;
     liveUrl?: string;
+    pdfUrl?: string;
     images?: ProjectImage[];
 }
 
@@ -79,6 +80,24 @@ export const PROJECTS: Project[] = [
         tags: ["C", "Winsock", "Networking", "Concurrency"],
         status: "ARCHIVED",
         repoUrl: "https://github.com/emalhaolautaro/c-chat-grupal"
+    },
+    {
+        id: "RES-001",
+        title: "Linux Hardening",
+        description: "Security implementation for a LAMP stack on Rocky Linux.",
+        longDescription: "Comprehensive hardening research and implementation for a server running WordPress, MariaDB, and Uptime Kuma on Rocky Linux. Documentation covers firewall configuration, permission management, service isolation, and security best practices.",
+        tags: ["Linux", "Security", "Rocky", "Bash", "Wordpress", "MariaDB", "Uptime Kuma"],
+        status: "ARCHIVED",
+        pdfUrl: "/docs/Hardening Informe - Lautaro Emalhao.pdf"
+    },
+    {
+        id: "RES-002",
+        title: "SELinux Analysis",
+        description: "Deep dive into Security-Enhanced Linux policies and mechanisms.",
+        longDescription: "A detailed research paper on SELinux architecture, analyzing mandatory access control (MAC), security contexts, policy types, and practical administration scenarios for system administrators.",
+        tags: ["Linux", "SELinux", "Security", "Research"],
+        status: "ARCHIVED",
+        pdfUrl: "/docs/Informe SELinux - Lautaro Uriel Emalhao.pdf"
     }
 ];
 

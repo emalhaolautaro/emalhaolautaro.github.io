@@ -13,16 +13,20 @@ interface TerminalBootProps {
     onBootComplete?: () => void;
 }
 
-// kur-os boot sequence - themed around Lautaro's kernel project
 const BOOT_SEQUENCE: TerminalLine[] = [
-    { timestamp: '0.000000', message: 'Linux version 6.9.0-kur (lautaro@void) #1 SMP PREEMPT_RT' },
-    { timestamp: '0.042851', message: 'BIOS-provided physical RAM map:' },
-    { timestamp: '0.123456', message: 'Initializing kur-os memory subsystem...' },
-    { timestamp: '0.198721', message: 'Memory: 16384K/32768K available' },
-    { timestamp: '0.247891', message: 'CPU: Intel(R) Core(TM) i7 @ 4.20GHz' },
-    { timestamp: '0.312456', message: 'Loading firmware: kur-os/core.bin' },
-    { timestamp: '0.389012', message: 'Mounting root filesystem...' },
-    { timestamp: '0.456789', message: 'Starting system services...' },
+    { timestamp: '0.000000', message: 'GNU GRUB  version 2.12-2.fc40' },
+    { timestamp: '0.010245', message: ' ' },
+    { timestamp: '0.021584', message: '*Linux 6.9.3-generic' },
+    { timestamp: '0.032412', message: ' Advanced options for Linux 6.9.3-generic' },
+    { timestamp: '0.041256', message: ' UEFI Firmware Settings' },
+    { timestamp: '0.052147', message: ' ' },
+    { timestamp: '0.061209', message: ' ' },
+    { timestamp: '0.072584', message: 'The highlighted entry will be executed automatically in 2s.' },
+    { timestamp: '1.084512', message: 'Booting in 1s...' },
+    { timestamp: '2.102567', message: 'Loading Linux 6.9.3-generic ...' },
+    { timestamp: '2.314258', message: 'Loading initial ramdisk ...' },
+    { timestamp: '2.825147', message: 'Decompressing Linux... Parsing ELF... done.' },
+    { timestamp: '3.125874', message: 'Booting the kernel.' },
 ];
 
 /**

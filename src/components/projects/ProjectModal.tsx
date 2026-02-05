@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import type { Project } from './types';
+import { FaFilePdf } from 'react-icons/fa6';
 
 interface ProjectModalProps {
     project: Project | null;
@@ -245,6 +246,25 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, isOpen, onClose })
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                                 </svg>
                                 <span>[ LIVE_DEMO ]</span>
+                            </a>
+                        )}
+                        {project.pdfUrl && (
+                            <a
+                                href={project.pdfUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="
+                                    inline-flex items-center gap-2
+                                    px-5 py-2.5
+                                    bg-blue-slate/10 hover:bg-blue-slate/20
+                                    text-blue-slate hover:text-dust-grey
+                                    border border-blue-slate/30 hover:border-blue-slate/50
+                                    rounded-lg font-mono text-sm
+                                    transition-all duration-200
+                                "
+                            >
+                                <FaFilePdf className="w-4 h-4" />
+                                <span>[ READ_PAPER ]</span>
                             </a>
                         )}
                     </div>
