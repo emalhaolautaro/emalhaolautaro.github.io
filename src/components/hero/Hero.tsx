@@ -1,8 +1,8 @@
 import GlassCard from './GlassCard';
-import ProfileAvatar from './ProfileAvatar';
 import HeroTitle from './HeroTitle';
 import StatusIndicator from './StatusIndicator';
 import HeroMessage from './HeroMessage';
+import TechStack from './TechStack';
 
 /**
  * Hero - Main hero section component
@@ -46,20 +46,28 @@ const Hero: React.FC = () => {
             />
 
             {/* Content Layer */}
-            <GlassCard className="relative z-20">
-                <div className="flex flex-col items-center text-center gap-6">
-                    <ProfileAvatar />
+            <GlassCard className="relative z-20" maxWidth="max-w-5xl" padding="p-8 md:p-12">
+                <div className="flex flex-col md:flex-row items-start gap-8 md:gap-12">
+                    {/* Left Column: Info */}
+                    <div className="flex flex-col items-start text-left gap-6 flex-1">
+                        <HeroTitle
+                            name="Lautaro Emalhao"
+                            role="Licenciado en Ciencias de la Computación"
+                        />
 
-                    <HeroTitle
-                        name="Lautaro Emalhao"
-                        role="Software Engineer"
-                    />
+                        <div className="w-full pl-1">
+                            <StatusIndicator className="items-start" />
+                        </div>
 
-                    <StatusIndicator />
+                        <HeroMessage
+                            text="I build end-to-end solutions by analyzing every layer of the system. My background enables me to design architectures that prioritize low-level efficiency alongside seamless user experiences. I advocate for software that is portable, robust, and well-structured by design."
+                        />
+                    </div>
 
-                    <HeroMessage
-                        text="Portfolio under construction"
-                    />
+                    {/* Right Column: Tech Stack */}
+                    <div className="flex-1 w-full md:w-auto">
+                        <TechStack />
+                    </div>
                 </div>
             </GlassCard>
         </section>

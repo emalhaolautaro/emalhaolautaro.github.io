@@ -13,7 +13,7 @@ const HeroMessage: React.FC<HeroMessageProps> = ({ text, version }) => {
             transition={{ delay: 0.6, duration: 0.5 }}
             className="space-y-1"
         >
-            <p className="text-white/50 text-sm md:text-base">
+            <p className="text-white/50 text-sm md:text-base text-justify">
                 {text}
             </p>
 

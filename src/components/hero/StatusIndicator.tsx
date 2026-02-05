@@ -4,6 +4,7 @@ interface StatusIndicatorProps {
     progress?: number; // 0-100
     color?: string;
     width?: string;
+    className?: string;
 }
 
 /**
@@ -13,9 +14,10 @@ const StatusIndicator: React.FC<StatusIndicatorProps> = ({
     progress = 82,
     color = '#ca61c3', // orchid-mist from palette
     width = '200px',
+    className = '',
 }) => {
     return (
-        <div className="flex flex-col items-center gap-2">
+        <div className={`flex flex-col gap-2 ${className}`}>
             {/* Progress bar background */}
             <div
                 style={{
