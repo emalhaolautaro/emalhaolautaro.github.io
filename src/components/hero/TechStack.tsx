@@ -12,7 +12,7 @@ const SkillBadge: React.FC<{ skill: string }> = ({ skill }) => {
                 p-2
                 bg-coffee-bean/50 border border-blue-slate/20
                 rounded-md
-                transition-all duration-300
+                transition-colors duration-200
                 hover:border-blood-red hover:bg-blood-red/10
                 cursor-default
             "

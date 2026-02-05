@@ -24,10 +24,10 @@ const GlassCard: React.FC<GlassCardProps> = ({
             className={`
                 ${maxWidth} ${padding} mx-auto w-full
                 bg-coffee-bean
-                border border-blue-slate/20 rounded-xl
+                border border-blue-slate/30 rounded-xl
                 shadow-none
-                transition-all duration-500
-                hover:border-blood-red hover:shadow-[0_0_15px_rgba(145,12,12,0.4)]
+                transition-[border-color,box-shadow,transform] duration-300 ease-out
+                hover:border-blood-red hover:shadow-[0_0_20px_rgba(145,12,12,0.3)]
                 ${className}
             `}
         >

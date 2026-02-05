@@ -15,10 +15,15 @@ const BootIntro: React.FC<BootIntroProps> = ({ onComplete }) => {
             initial={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5, ease: 'easeInOut' }}
-            className="fixed inset-0 z-50 bg-black flex items-center justify-center p-8"
+            className="fixed inset-0 z-50 bg-black flex items-center justify-center p-8 cursor-pointer"
+            onClick={onComplete} // Allow skipping
         >
             <div className="max-w-2xl w-full">
                 <TerminalBoot onBootComplete={onComplete} />
+            </div>
+            {/* Skip hint */}
+            <div className="absolute bottom-8 text-white/20 text-xs font-mono animate-pulse">
+                [ CLICK TO SKIP ]
             </div>
         </motion.div>
     );

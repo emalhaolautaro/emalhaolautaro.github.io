@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, Suspense } from 'react';
 import ProjectCard from './ProjectCard';
-import ProjectModal from './ProjectModal';
 import { PROJECTS, type Project } from './types';
+
+const ProjectModal = React.lazy(() => import('./ProjectModal'));
 
 const ProjectSection: React.FC = () => {
     const [selectedProject, setSelectedProject] = useState<Project | null>(null);
@@ -61,11 +62,13 @@ const ProjectSection: React.FC = () => {
             </div>
 
             {/* Modal */}
-            <ProjectModal
-                project={selectedProject}
-                isOpen={isModalOpen}
-                onClose={closeModal}
-            />
+            <Suspense fallback={null}>
+                <ProjectModal
+                    project={selectedProject}
+                    isOpen={isModalOpen}
+                    onClose={closeModal}
+                />
+            </Suspense>
         </section>
     );
 };

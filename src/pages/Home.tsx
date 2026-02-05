@@ -2,6 +2,7 @@ import Hero from '../components/hero/Hero';
 import CertificationSection from '../components/certifications/CertificationSection';
 import ProjectSection from '../components/projects/ProjectSection';
 import SectionDivider from '../components/ui/SectionDivider';
+import Spotlight from '../components/ui/Spotlight';
 
 /**
  * Home - Portfolio homepage
@@ -11,6 +12,7 @@ import SectionDivider from '../components/ui/SectionDivider';
 const Home: React.FC = () => {
     return (
         <main className="relative min-h-screen bg-dark-obsidian">
+            <Spotlight />
             {/* Global background - handles its own fixed positioning */}
             {/* NetworkBackground moved to Hero */}
 

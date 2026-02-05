@@ -28,31 +28,18 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onClick }) => {
             onClick={onClick}
             className="
                 group relative overflow-hidden rounded-xl
-                bg-blue-slate/5 backdrop-blur-md
-                border border-blue-slate/20
+                bg-coffee-bean
+                border border-blue-slate/30
                 p-6 min-h-[280px]
                 flex flex-col text-left w-full
-                transition-[background-color,border-color,box-shadow,transform] duration-300 ease-out
-                hover:border-blue-slate/50
-                hover:bg-blue-slate/10
-                hover:shadow-[0_0_30px_rgba(106,115,152,0.15)]
+                transition-[border-color,box-shadow,transform] duration-300 ease-out
+                hover:border-blue-slate
+                hover:shadow-[0_0_20px_rgba(106,115,152,0.3)]
                 cursor-pointer
             "
-            style={{ willChange: 'border-color, background-color, box-shadow, transform' }}
+            style={{ willChange: 'border-color, box-shadow, transform' }}
         >
-            {/* Glassmorphism highlight */}
-            <div
-                className="
-                    absolute -top-1/2 -right-1/2
-                    w-full h-full
-                    bg-gradient-to-br from-blue-slate/10 to-transparent
-                    rounded-full blur-3xl
-                    opacity-0 group-hover:opacity-100
-                    transition-opacity duration-500
-                    pointer-events-none
-                "
-                style={{ willChange: 'opacity' }}
-            />
+
 
             {/* Header */}
             <div className="flex justify-between items-start mb-4 relative z-10">

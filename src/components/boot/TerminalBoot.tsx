@@ -36,8 +36,8 @@ const BOOT_SEQUENCE: TerminalLine[] = [
  */
 const TerminalBoot: React.FC<TerminalBootProps> = ({
     className = '',
-    typingSpeed = 15,
-    lineDelay = 80,
+    typingSpeed = 1, // Ultra fast
+    lineDelay = 10,   // Almost no delay
     onBootComplete
 }) => {
     const [visibleLines, setVisibleLines] = useState<number>(0);
