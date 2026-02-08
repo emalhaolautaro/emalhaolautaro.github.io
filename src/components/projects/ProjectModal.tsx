@@ -93,11 +93,37 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, isOpen, onClose })
                 {/* Image Gallery */}
                 {hasImages && (
                     <div className="relative w-full aspect-video bg-dark-obsidian/50 overflow-hidden rounded-t-2xl">
-                        <img
-                            src={project.images![currentImageIndex].src}
-                            alt={project.images![currentImageIndex].alt}
-                            className="w-full h-full object-cover"
-                        />
+                        <picture>
+                            {/* AVIF - best compression */}
+                            {project.images![currentImageIndex].srcAvif && (
+                                <source
+                                    srcSet={project.images![currentImageIndex].srcAvif}
+                                    type="image/avif"
+                                />
+                            )}
+                            {/* WebP - good compression, wide support */}
+                            {project.images![currentImageIndex].srcWebp && (
+                                <source
+                                    srcSet={project.images![currentImageIndex].srcWebp}
+                                    type="image/webp"
+                                />
+                            )}
+                            {/* If src is already webp, add it as source too */}
+                            {project.images![currentImageIndex].src.endsWith('.webp') && (
+                                <source
+                                    srcSet={project.images![currentImageIndex].src}
+                                    type="image/webp"
+                                />
+                            )}
+                            {/* Fallback img - always rendered */}
+                            <img
+                                src={project.images![currentImageIndex].src}
+                                alt={project.images![currentImageIndex].alt}
+                                className="w-full h-full object-cover"
+                                loading="lazy"
+                                decoding="async"
+                            />
+                        </picture>
 
                         {/* Image Navigation */}
                         {hasMultipleImages && (

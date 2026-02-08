@@ -10,12 +10,22 @@
 @import "tailwindcss";
 
 /* ─────────── Theme Configuration ─────────── */
+/* Paleta azulada inspirada en gradiente teal/slate */
 @theme {
-  --color-dark-obsidian: hsla(240, 10%, 4%, 1);
-  --color-coffee-bean: hsla(318, 45%, 6%, 1);
-  --color-dust-grey: hsla(38, 16%, 76%, 1);
-  --color-blue-slate: hsla(233, 14%, 46%, 1);
-  --color-blood-red: hsla(3, 99%, 28%, 1);
+  /* Background más oscuro - base de la UI */
+  --color-dark-obsidian: #0E1D21;
+  /* Background de cards y secciones */
+  --color-coffee-bean: #122E34;
+  /* Texto principal - gris azulado claro */
+  --color-dust-grey: #ABAFB5;
+  /* Acentos y bordes - azul grisáceo medio */
+  --color-blue-slate: #677E8A;
+  /* Reemplaza blood-red con un teal para hover/acentos */
+  --color-accent-teal: #4A8C99;
+  /* Mantenemos blood-red pero en tono azulado para compatibilidad */
+  --color-blood-red: #4A8C99;
+  /* Color para acentos rosados/cálidos del gradiente */
+  --color-warm-accent: #E0B4B2;
 
   --font-family-sans: 'Inter', system-ui, -apple-system, sans-serif;
   --font-family-mono: 'JetBrains Mono', 'Fira Code', monospace;

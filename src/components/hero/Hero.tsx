@@ -2,6 +2,7 @@ import GlassCard from './GlassCard';
 import HeroTitle from './HeroTitle';
 import StatusIndicator from './StatusIndicator';
 import HeroMessage from './HeroMessage';
+import SocialButtons from './SocialButtons';
 import TechStack from './TechStack';
 import HeroBackground from './HeroBackground';
 
@@ -32,6 +33,8 @@ const Hero: React.FC = () => {
                         <HeroMessage
                             text="I build end-to-end solutions by analyzing every layer of the system. My background enables me to design architectures that prioritize low-level efficiency alongside seamless user experiences. I advocate for software that is portable, robust, and well-structured by design."
                         />
+
+                        <SocialButtons className="mt-2" />
                     </div>
 
                     {/* Right Column: Tech Stack */}

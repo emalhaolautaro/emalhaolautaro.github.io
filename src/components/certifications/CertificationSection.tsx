@@ -5,7 +5,15 @@ import { CERTIFICATIONS } from './types';
 const CertificationSection: React.FC = () => {
     return (
         <section
-            className="relative z-10 py-24 px-4 flex flex-col items-center min-h-screen bg-coffee-bean"
+            className="relative z-10 py-24 px-4 flex flex-col items-center min-h-screen"
+            style={{
+                background: `linear-gradient(135deg, 
+                    rgba(103, 126, 138, 0.15) 0%,
+                    rgba(46, 61, 71, 0.20) 30%,
+                    rgba(18, 46, 52, 0.30) 60%,
+                    #0E1D21 100%
+                )`
+            }}
         >
             {/* Título de la sección */}
             <div className="max-w-7xl w-full mx-auto text-center mb-24">

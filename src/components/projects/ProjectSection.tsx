@@ -21,23 +21,16 @@ const ProjectSection: React.FC = () => {
 
     return (
         <section
-            className="relative z-10 py-24 px-4 flex flex-col items-center min-h-screen bg-coffee-bean"
+            className="relative z-10 py-24 px-4 flex flex-col items-center min-h-screen"
+            style={{
+                background: `linear-gradient(135deg, 
+                    rgba(46, 61, 71, 0.25) 0%,
+                    rgba(18, 46, 52, 0.35) 40%,
+                    #0E1D21 80%,
+                    #0E1D21 100%
+                )`
+            }}
         >
-            {/* Subtle blue gradient overlay */}
-            <div
-                className="
-                    absolute inset-0
-                    bg-[radial-gradient(ellipse_at_top_right,_rgba(106,115,152,0.08)_0%,_transparent_60%)]
-                    pointer-events-none
-                "
-            />
-            <div
-                className="
-                    absolute inset-0
-                    bg-[radial-gradient(ellipse_at_bottom_left,_rgba(106,115,152,0.05)_0%,_transparent_50%)]
-                    pointer-events-none
-                "
-            />
 
             {/* Section Title */}
             <div className="max-w-7xl w-full mx-auto text-center mb-24 relative z-10">

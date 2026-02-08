@@ -12,9 +12,21 @@ import Spotlight from '../components/ui/Spotlight';
 const Home: React.FC = () => {
     return (
         <main className="relative min-h-screen bg-dark-obsidian">
+            {/* Global gradient overlay - creates the light-to-dark diagonal feel */}
+            <div
+                className="fixed inset-0 pointer-events-none z-0"
+                style={{
+                    background: `
+                        linear-gradient(135deg, 
+                            rgba(171, 175, 181, 0.12) 0%, 
+                            rgba(103, 126, 138, 0.08) 30%,
+                            rgba(18, 46, 52, 0.05) 60%,
+                            transparent 100%
+                        )
+                    `
+                }}
+            />
             <Spotlight />
-            {/* Global background - handles its own fixed positioning */}
-            {/* NetworkBackground moved to Hero */}
 
             {/* Content */}
             <Hero />

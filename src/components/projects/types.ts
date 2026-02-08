@@ -1,5 +1,7 @@
 export interface ProjectImage {
-    src: string;
+    src: string;        // Fallback (jpg/png)
+    srcWebp?: string;   // WebP version
+    srcAvif?: string;   // AVIF version (most efficient)
     alt: string;
 }
 

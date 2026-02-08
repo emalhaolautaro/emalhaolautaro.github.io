@@ -8,22 +8,17 @@ interface LightProp {
 
 const LIGHTS: LightProp[] = [
     {
-        // Hero Light - Top Left (Blood Red)
-        className: "absolute -top-1/3 -left-1/3 w-[100vw] h-[100vh] rounded-full pointer-events-none",
-        background: 'radial-gradient(circle, hsla(3, 99%, 28%, 0.15) 0%, transparent 60%)',
-        filter: 'blur(60px)'
-    },
-    {
-        // Sectional Light - Bottom Right (Blue Slate)
-        className: "absolute -bottom-1/3 -right-1/3 w-[90vw] h-[90vh] rounded-full pointer-events-none",
-        background: 'radial-gradient(circle, hsla(233, 14%, 46%, 0.12) 0%, transparent 60%)',
-        filter: 'blur(80px)'
-    },
-    {
-        // Warm Center Light (Dust Grey)
-        className: "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60vw] h-[60vh] rounded-full pointer-events-none",
-        background: 'radial-gradient(circle, hsla(38, 16%, 76%, 0.05) 0%, transparent 50%)',
-        filter: 'blur(40px)'
+        // Main linear gradient - Light to Dark diagonal
+        className: "absolute inset-0 pointer-events-none",
+        background: `linear-gradient(135deg, 
+            rgba(171, 175, 181, 0.20) 0%, 
+            rgba(224, 180, 178, 0.10) 15%,
+            rgba(103, 126, 138, 0.15) 35%,
+            rgba(46, 61, 71, 0.20) 55%,
+            rgba(18, 46, 52, 0.25) 75%,
+            rgba(14, 29, 33, 0.30) 100%
+        )`,
+        filter: 'none'
     }
 ];
 

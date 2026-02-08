@@ -15,7 +15,7 @@ const CertificationCard: React.FC<CertificationCardProps> = ({ certification }) 
             href={certUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="block rounded-xl overflow-hidden transition-all duration-300 flex flex-col group bg-coffee-bean border border-blue-slate/30 min-h-[280px] box-border hover:border-blood-red hover:shadow-[0_0_20px_rgba(145,12,12,0.3)] cursor-pointer"
+            className="block rounded-xl overflow-hidden transition-all duration-300 flex flex-col group bg-coffee-bean border border-blue-slate/30 min-h-[280px] box-border hover:border-accent-teal hover:shadow-[0_0_20px_rgba(74,140,153,0.3)] cursor-pointer"
         >
             {/* Header con ID y Status */}
             <div

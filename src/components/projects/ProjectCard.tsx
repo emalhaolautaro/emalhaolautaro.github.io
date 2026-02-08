@@ -57,9 +57,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onClick }) => {
                 {project.description}
             </p>
 
-            {/* Tags - Limited to 3 to maintain symmetry */}
+            {/* Tags - Limited to 2 to maintain symmetry */}
             <div className="flex flex-wrap gap-2 mb-4 relative z-10">
-                {project.tags.slice(0, 3).map((tag) => (
+                {project.tags.slice(0, 2).map((tag) => (
                     <span
                         key={tag}
                         className="
