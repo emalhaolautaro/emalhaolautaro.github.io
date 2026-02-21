@@ -34,7 +34,7 @@ const ProjectSection: React.FC = () => {
 
             {/* Section Title */}
             <div className="max-w-7xl w-full mx-auto text-center mb-24 relative z-10">
-                <h2 className="text-4xl md:text-5xl font-bold text-dust-grey tracking-wider">
+                <h2 className="text-4xl md:text-5xl font-bold text-dust-grey tracking-wider font-mono">
                     PROJECTS
                 </h2>
                 <p className="mt-4 text-sm font-mono text-blue-slate">

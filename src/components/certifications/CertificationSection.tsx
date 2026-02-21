@@ -17,7 +17,7 @@ const CertificationSection: React.FC = () => {
         >
             {/* Título de la sección */}
             <div className="max-w-7xl w-full mx-auto text-center mb-24">
-                <h2 className="text-4xl md:text-5xl font-bold text-eggshell tracking-wider">
+                <h2 className="text-4xl md:text-5xl font-bold text-eggshell tracking-wider font-mono">
                     CERTIFICATIONS
                 </h2>
             </div>

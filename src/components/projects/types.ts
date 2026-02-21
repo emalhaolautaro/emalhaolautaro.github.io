@@ -75,6 +75,15 @@ export const PROJECTS: Project[] = [
         ]
     },
     {
+        id: "APP-003",
+        title: "TuBalance",
+        description: "Desktop expense management app with real-time analytics and category tracking.",
+        longDescription: "A cross-platform desktop application built with Tauri for managing personal finances. Features interactive charts, category-based expense tracking, and cash flow analysis. The Rust backend ensures high performance and a lightweight footprint, while the React frontend delivers a modern, responsive UI.",
+        tags: ["Tauri", "React", "TypeScript", "Rust"],
+        status: "ACTIVE",
+        repoUrl: "https://github.com/emalhaolautaro/gastos-app"
+    },
+    {
         id: "NET-001",
         title: "C Group Chat",
         description: "Multi-client chat server and client developed using low-level sockets.",
